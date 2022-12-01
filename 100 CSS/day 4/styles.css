@@ -1,0 +1,55 @@
+:root {
+    motion: cubic-bezier(.21, .98, .6, .99);
+}
+
+.frame {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -200px;
+    background: #e56262;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 2;
+    border-radius: 50%;
+    box-shadow: 10px 3px 10px rgba(0, 0, 0, 0.2);
+    animation-fill-mode: both;
+    animation: anim 2s infinite alternate;
+}
+
+.c1 {
+    margin: -35px 0 0 -36px;
+    width: 100px;
+    height: 100px;
+}
+
+.c2 {
+    margin: -14px 0 0 -17px;
+    width: 60px;
+    height: 60px;
+}
+
+.c3 {
+    width: 30px;
+    height: 30px;
+}
+@keyframes anim {
+    0% {
+        transform: scale(0);
+        box-sizing: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+    50% {
+        box-sizing: 10px 10px 8px rgba(0,0,0,0.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
